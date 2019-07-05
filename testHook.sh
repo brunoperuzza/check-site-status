@@ -15,7 +15,7 @@ testarHook() {
 
 	COMUNICACAO="${URL_ROCKETHOOK}/${ROCKETHOOK}"
 
-	MENSAGEM="${HORARIO} - ${NOME_APLICACAO} - ${MENSAGEM_TESTE_COMUNICACAO}"
+	MENSAGEM="${HORARIO} - ${MENSAGEM_TESTE_COMUNICACAO}"
 
 	COMANDO="$(curl -X POST --data-urlencode 'payload={"icon_emoji":"'"${EMOJI}"'","attachments":[{"text":"'"${MENSAGEM}"'","color":"'"${COLOR}"'"}]}' ${COMUNICACAO})"
 	echo -e ${COMANDO}
